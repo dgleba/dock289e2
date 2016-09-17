@@ -17,7 +17,7 @@ php:
         - app
 
 app:
-    image: php:7.0-fpm
+    image: php:5
     volumes:
         - .:/var/www/html
     command: "true"
@@ -41,7 +41,7 @@ data:
 phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
-        - 8080:80
+        - 8078:80
     links:
         - mysql
     environment:
